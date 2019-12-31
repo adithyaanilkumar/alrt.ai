@@ -6,9 +6,6 @@ https://stackoverflow.com/questions/57792590/google-news-xml-api-use-country-lan
 https://www.andiamo.co.uk/resources/iso-language-codes/
 https://sites.google.com/site/tomihasa/google-language-codes
 """
-
-#fp = open("label.json")
-#with open("labels.json", "r") as fp:
 with open("labels.json", "r") as fp:
     labels = json.load(fp)["parameters"]
 
@@ -45,5 +42,5 @@ print("no of gl: {}".format(len(mod_labels['gl'])))
 print(hl_none_exist)#the names which are not in hl
 print(gl_none_exist)#the names which are not in gl
 
-#with open("final.json", "w") as fp:
-   # json.dump(mod_labels, fp)
+with open("final.json", "w") as fp:
+   json.dump(mod_labels, fp)
